@@ -8,10 +8,11 @@
   width: 100px;
   height: 100px;
   background: rgb(72, 105, 102);
+  background: rgb(93, 135, 131);
   background: radial-gradient(
     circle,
-    rgba(72, 105, 102, 1) 0%,
-    rgba(93, 135, 131, 1) 100%
+    rgba(93, 135, 131, 1) 0%,
+    rgba(72, 105, 102, 1) 100%
   );
   border: 1px solid black;
   border-radius: 50%;
@@ -72,11 +73,11 @@
 .orbital {
   width: 20px;
   height: 20px;
-  background: rgb(72, 105, 102);
+  background: rgb(93, 135, 131);
   background: radial-gradient(
     circle,
-    rgba(72, 105, 102, 1) 0%,
-    rgba(93, 135, 131, 1) 100%
+    rgba(93, 135, 131, 1) 0%,
+    rgba(72, 105, 102, 1) 100%
   );
   border-radius: 50%;
   position: absolute;
