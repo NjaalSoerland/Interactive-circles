@@ -118,15 +118,19 @@
 @keyframes borderFade {
   0% {
     border: 1px solid black;
+    scale: 1.15;
   }
   25% {
     border: none;
+    scale: 0.85;
   }
   75% {
     border: none;
+    scale: 0.85;
   }
   100% {
     border: 1px solid black;
+    scale: 1.15;
   }
 }
 
