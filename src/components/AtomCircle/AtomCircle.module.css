@@ -1,7 +1,16 @@
+:root {
+  --topOrbitalAnimationTime: 1.2s;
+  --upperMiddleOrbitalAnimationTime: 1.4s;
+  --middleOrbitalAnimationTime: 1.6s;
+  --lowerMiddleOrbitalAnimationTime: 1.8s;
+  --bottomOrbitalAnimationTime: 2s;
+}
+
 .AtomCircle {
   width: 100px;
   height: 100px;
   background-color: rgb(182, 212, 202);
+  border: 1px solid black;
   border-radius: 50%;
   transition: 0.2s;
   position: relative;
@@ -16,68 +25,70 @@
 }
 
 .AtomCircle:hover #topOrbital .orbital {
-  animation: borderFade 1.5s infinite linear;
+  animation: borderFade var(--topOrbitalAnimationTime) infinite linear;
 }
 
 .AtomCircle:hover #topOrbital .rotate {
-  animation: circle 1.5s infinite linear;
+  animation: circle var(--topOrbitalAnimationTime) infinite linear;
   transform-origin: 50% 50%;
 }
 
 .AtomCircle:hover #topOrbital .counterRotate {
-  animation: counterCircle 1.5s infinite linear;
+  animation: counterCircle var(--topOrbitalAnimationTime) infinite linear;
 }
 
 .AtomCircle:hover #upperMiddleOrbital .orbital {
-  animation: borderFade 1.8s infinite linear;
+  animation: borderFade var(--upperMiddleOrbitalAnimationTime) infinite linear;
 }
 
 .AtomCircle:hover #upperMiddleOrbital .rotate {
-  animation: circle 1.8s infinite linear;
+  animation: circle var(--upperMiddleOrbitalAnimationTime) infinite linear;
   transform-origin: 50% 50%;
 }
 
 .AtomCircle:hover #upperMiddleOrbital .counterRotate {
-  animation: counterCircle 1.8s infinite linear;
+  animation: counterCircle var(--upperMiddleOrbitalAnimationTime) infinite
+    linear;
 }
 
 .AtomCircle:hover #middleOrbital .orbital {
-  animation: borderFade 1.6s infinite linear;
+  animation: borderFade var(--middleOrbitalAnimationTime) infinite linear;
 }
 
 .AtomCircle:hover #middleOrbital .rotate {
-  animation: circle 1.6s infinite linear;
+  animation: circle var(--middleOrbitalAnimationTime) infinite linear;
   transform-origin: 50% 50%;
 }
 
 .AtomCircle:hover #middleOrbital .counterRotate {
-  animation: counterCircle 1.6s infinite linear;
+  animation: counterCircle var(--middleOrbitalAnimationTime) infinite linear;
 }
 
 .AtomCircle:hover #lowerMiddleOrbital .orbital {
-  animation: borderFade 1.3s infinite linear;
+  animation: borderFade var(--lowerMiddleOrbitalAnimationTime) infinite linear;
 }
 
 .AtomCircle:hover #lowerMiddleOrbital .rotate {
-  animation: circle 1.3s infinite linear;
+  animation: circle var(--lowerMiddleOrbitalAnimationTime) infinite linear;
   transform-origin: 50% 50%;
 }
 
 .AtomCircle:hover #lowerMiddleOrbital .counterRotate {
-  animation: counterCircle 1.3s infinite linear;
+  animation: counterCircle var(--lowerMiddleOrbitalAnimationTime) infinite
+    linear;
 }
 
 .AtomCircle:hover #bottomOrbital .orbital {
-  animation: borderFade 1.2s infinite linear;
+  animation: borderFade var(--bottomOrbitalAnimationTime) infinite linear;
 }
 
 .AtomCircle:hover #bottomOrbital .rotate {
-  animation: circle 1.2s infinite linear;
+  animation: circle var(--bottomOrbitalAnimationTime) infinite linear;
   transform-origin: 50% 50%;
 }
 
 .AtomCircle:hover #bottomOrbital .counterRotate {
-  animation: counterCircle 1.2s infinite linear;
+  animation: counterCircle var(--bottomOrbitalAnimationTime) infinite linear;
 }
 
 .orbit {
