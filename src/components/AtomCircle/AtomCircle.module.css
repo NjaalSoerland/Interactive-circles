@@ -1,13 +1,18 @@
 :root {
   --topOrbitalAnimationTime: 1.2s;
-  --middleOrbitalAnimationTime: 1.7s;
+  --middleOrbitalAnimationTime: 1.5s;
   --bottomOrbitalAnimationTime: 1.3s;
 }
 
 .AtomCircle {
   width: 100px;
   height: 100px;
-  background-color: rgb(182, 212, 202);
+  background: rgb(72, 105, 102);
+  background: radial-gradient(
+    circle,
+    rgba(72, 105, 102, 1) 0%,
+    rgba(93, 135, 131, 1) 100%
+  );
   border: 1px solid black;
   border-radius: 50%;
   transition: 0.2s;
@@ -19,11 +24,7 @@
   transform: scale(1.3);
 }
 
-.AtomCircle:hover .orbital {
-  display: block;
-}
-
-.AtomCircle:hover svg {
+.AtomCircle:hover .orbit {
   display: block;
 }
 
@@ -31,6 +32,7 @@
   position: absolute;
   left: 0;
   top: 15px;
+  z-index: 1;
 }
 
 .hoverable {
@@ -46,14 +48,15 @@
   left: 95px;
   height: 100px;
   position: absolute;
+  display: none;
   border-radius: 50%;
 }
 
 .orbit svg {
   position: absolute;
-  left: -90px;
-  top: -10px;
-  display: none;
+  left: -189px;
+  top: 15px;
+  rotate: 180deg;
 }
 
 .rotate {
@@ -69,27 +72,31 @@
 .orbital {
   width: 20px;
   height: 20px;
-  background-color: rgb(182, 212, 202);
+  background: rgb(72, 105, 102);
+  background: radial-gradient(
+    circle,
+    rgba(72, 105, 102, 1) 0%,
+    rgba(93, 135, 131, 1) 100%
+  );
   border-radius: 50%;
   position: absolute;
-  display: none;
   transform: scaleX(0.2);
 }
 
 #topOrbital {
   transform: rotate(45deg) scaleX(5);
-  left: 62px;
-  top: 67px;
+  left: 54px;
+  top: 54px;
 }
 
 #middleOrbital {
-  top: 20px;
+  top: 10px;
   transform: scaleX(5);
 }
 
 #bottomOrbital {
   transform: rotate(-45deg) scaleX(5);
-  top: -40px;
+  top: -45px;
 }
 
 /** Animations **/
@@ -117,20 +124,20 @@
 
 @keyframes borderFade {
   0% {
-    border: 1px solid black;
-    scale: 1.15;
+    border: none;
+    scale: 0.9;
   }
   25% {
-    border: none;
-    scale: 0.85;
+    border: 1px solid black;
+    scale: 1.1;
   }
   75% {
-    border: none;
-    scale: 0.85;
+    border: 1px solid black;
+    scale: 1.1;
   }
   100% {
-    border: 1px solid black;
-    scale: 1.15;
+    border: none;
+    scale: 0.9;
   }
 }
 

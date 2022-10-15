@@ -20,8 +20,8 @@ const AtomCircle: React.FC = () => {
                 cx="100"
                 cy="50"
                 r="11%"
-                stroke="black"
-                stroke-width="0.5"
+                stroke="#486966"
+                stroke-width="0.7"
                 fill="none"
               />
             </svg>
