@@ -4,7 +4,9 @@ import styles from "./AtomCircle.module.css";
 const AtomCircle: React.FC = () => {
   const orbits = [
     styles.topOrbital,
+    styles.upperMiddleOrbital,
     styles.middleOrbital,
+    styles.lowerMiddleOrbital,
     styles.bottomOrbital,
   ];
   return (
