@@ -1,8 +1,6 @@
 :root {
   --topOrbitalAnimationTime: 1.2s;
-  --upperMiddleOrbitalAnimationTime: 1.4s;
   --middleOrbitalAnimationTime: 1.6s;
-  --lowerMiddleOrbitalAnimationTime: 1.8s;
   --bottomOrbitalAnimationTime: 2s;
 }
 
@@ -24,6 +22,10 @@
   display: block;
 }
 
+.AtomCircle:hover svg {
+  display: block;
+}
+
 .AtomCircle img {
   position: absolute;
   left: 0;
@@ -37,6 +39,13 @@
   height: 100px;
   position: absolute;
   border-radius: 50%;
+}
+
+.orbit svg {
+  position: absolute;
+  left: -90px;
+  top: -10px;
+  display: none;
 }
 
 .rotate {
@@ -61,13 +70,8 @@
 
 #topOrbital {
   transform: rotate(45deg) scaleX(5);
-  left: 50px;
+  left: 60px;
   top: 50px;
-}
-
-#upperMiddleOrbital {
-  transform: rotate(160deg) scaleX(5);
-  left: -48px;
 }
 
 #middleOrbital {
@@ -75,15 +79,9 @@
   transform: scaleX(5);
 }
 
-#lowerMiddleOrbital {
-  left: -28px;
-  top: -60px;
-  transform: rotate(-160deg) scaleX(5);
-}
-
 #bottomOrbital {
   transform: rotate(-45deg) scaleX(5);
-  top: -25px;
+  top: -55px;
 }
 
 /** Animations **/
@@ -139,20 +137,6 @@
   animation: counterCircle var(--topOrbitalAnimationTime) infinite linear;
 }
 
-.AtomCircle:hover #upperMiddleOrbital .orbital {
-  animation: borderFade var(--upperMiddleOrbitalAnimationTime) infinite linear;
-}
-
-.AtomCircle:hover #upperMiddleOrbital .rotate {
-  animation: circle var(--upperMiddleOrbitalAnimationTime) infinite linear;
-  transform-origin: 50% 50%;
-}
-
-.AtomCircle:hover #upperMiddleOrbital .counterRotate {
-  animation: counterCircle var(--upperMiddleOrbitalAnimationTime) infinite
-    linear;
-}
-
 .AtomCircle:hover #middleOrbital .orbital {
   animation: borderFade var(--middleOrbitalAnimationTime) infinite linear;
 }
@@ -164,20 +148,6 @@
 
 .AtomCircle:hover #middleOrbital .counterRotate {
   animation: counterCircle var(--middleOrbitalAnimationTime) infinite linear;
-}
-
-.AtomCircle:hover #lowerMiddleOrbital .orbital {
-  animation: borderFade var(--lowerMiddleOrbitalAnimationTime) infinite linear;
-}
-
-.AtomCircle:hover #lowerMiddleOrbital .rotate {
-  animation: circle var(--lowerMiddleOrbitalAnimationTime) infinite linear;
-  transform-origin: 50% 50%;
-}
-
-.AtomCircle:hover #lowerMiddleOrbital .counterRotate {
-  animation: counterCircle var(--lowerMiddleOrbitalAnimationTime) infinite
-    linear;
 }
 
 .AtomCircle:hover #bottomOrbital .orbital {

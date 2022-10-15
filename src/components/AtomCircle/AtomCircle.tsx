@@ -5,9 +5,7 @@ import logo from "../../logo.svg";
 const AtomCircle: React.FC = () => {
   const orbits = [
     styles.topOrbital,
-    styles.upperMiddleOrbital,
     styles.middleOrbital,
-    styles.lowerMiddleOrbital,
     styles.bottomOrbital,
   ];
   return (
@@ -16,6 +14,16 @@ const AtomCircle: React.FC = () => {
       {orbits.map((orbit) => {
         return (
           <div className={styles.orbit} id={orbit}>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <circle
+                cx="100"
+                cy="50"
+                r="25"
+                stroke="black"
+                stroke-width="0.5"
+                fill="none"
+              />
+            </svg>
             <div className={styles.rotate}>
               <div className={styles.counterRotate}>
                 <div className={styles.orbital} />
