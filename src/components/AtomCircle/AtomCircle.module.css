@@ -12,6 +12,7 @@
   border-radius: 50%;
   transition: 0.2s;
   position: relative;
+  pointer-events: none;
 }
 
 .AtomCircle:hover {
@@ -30,6 +31,13 @@
   position: absolute;
   left: 0;
   top: 15px;
+}
+
+.hoverable {
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  pointer-events: auto;
 }
 
 .orbit {
@@ -70,18 +78,18 @@
 
 #topOrbital {
   transform: rotate(45deg) scaleX(5);
-  left: 60px;
-  top: 55px;
+  left: 62px;
+  top: 67px;
 }
 
 #middleOrbital {
-  top: 10px;
+  top: 20px;
   transform: scaleX(5);
 }
 
 #bottomOrbital {
   transform: rotate(-45deg) scaleX(5);
-  top: -50px;
+  top: -40px;
 }
 
 /** Animations **/
@@ -109,16 +117,16 @@
 
 @keyframes borderFade {
   0% {
-    border: none;
+    border: 1px solid black;
   }
   25% {
-    border: 1px solid black;
+    border: none;
   }
   75% {
-    border: 1px solid black;
+    border: none;
   }
   100% {
-    border: 1px none;
+    border: 1px solid black;
   }
 }
 

@@ -11,14 +11,15 @@ const AtomCircle: React.FC = () => {
   return (
     <div className={styles.AtomCircle}>
       <img src={logo} alt="-----"></img>
+      <div className={styles.hoverable} />
       {orbits.map((orbit) => {
         return (
           <div className={styles.orbit} id={orbit}>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height={70}>
               <circle
                 cx="100"
                 cy="50"
-                r="25"
+                r="11%"
                 stroke="black"
                 stroke-width="0.5"
                 fill="none"
