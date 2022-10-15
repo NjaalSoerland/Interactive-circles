@@ -1,0 +1,138 @@
+.AtomCircle {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(182, 212, 202);
+  border-radius: 50%;
+  transition: 0.2s;
+  position: relative;
+}
+
+.AtomCircle:hover {
+  transform: scale(1.3);
+}
+
+.AtomCircle:hover .orbital {
+  display: block;
+}
+
+.AtomCircle:hover #topOrbital .rotate {
+  -webkit-animation: circle 1.5s infinite linear;
+  -webkit-transform-origin: 50% 50%;
+  animation: circle 1.5s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+.AtomCircle:hover #topOrbital .counterRotate {
+  -webkit-animation: counterCircle 1.5s infinite linear;
+  animation: counterCircle 1.5s infinite linear;
+}
+
+.AtomCircle:hover #middleOrbital .rotate {
+  -webkit-animation: circle 1.6s infinite linear;
+  -webkit-transform-origin: 50% 50%;
+  animation: circle 1.6s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+.AtomCircle:hover #middleOrbital .counterRotate {
+  -webkit-animation: counterCircle 1.6s infinite linear;
+  animation: counterCircle 1.6s infinite linear;
+}
+
+.AtomCircle:hover #bottomOrbital .rotate {
+  -webkit-animation: circle 1.2s infinite linear;
+  -webkit-transform-origin: 50% 50%;
+  animation: circle 1.2s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+.AtomCircle:hover #bottomOrbital .counterRotate {
+  -webkit-animation: counterCircle 1.2s infinite linear;
+  animation: counterCircle 1.2s infinite linear;
+}
+
+.orbit {
+  position: absolute;
+  width: 50px;
+  left: 95px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.rotate {
+  width: 100%;
+  height: 100%;
+}
+
+.counterRotate {
+  width: 50px;
+  height: 50px;
+}
+
+.orbital {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(182, 212, 202);
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  border: 1px solid black;
+  -webkit-transform: scaleX(0.2);
+  transform: scaleX(0.2);
+}
+
+#topOrbital {
+  transform: rotate(45deg) scaleX(5);
+  -webkit-transform: rotate(45deg) scaleX(5);
+  left: 50px;
+  top: 50px;
+}
+
+#middleOrbital {
+  top: 20px;
+  -webkit-transform: scaleX(5);
+  transform: scaleX(5);
+}
+
+#bottomOrbital {
+  transform: rotate(-45deg) scaleX(5);
+  -webkit-transform: rotate(-45deg) scaleX(5);
+  top: -25px;
+}
+
+@-webkit-keyframes circle {
+  from {
+    -webkit-transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+
+@keyframes circle {
+  from {
+    -webkit-transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes counterCircle {
+  from {
+    -webkit-transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+  }
+}
+
+@keyframes counterCircle {
+  from {
+    -webkit-transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+  }
+}
