@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./AtomCircle.module.css";
+import logo from "../../logo.svg";
 
 const AtomCircle: React.FC = () => {
   const orbits = [
@@ -11,6 +12,7 @@ const AtomCircle: React.FC = () => {
   ];
   return (
     <div className={styles.AtomCircle}>
+      <img src={logo} alt="-----"></img>
       {orbits.map((orbit) => {
         return (
           <div className={styles.orbit} id={orbit}>
