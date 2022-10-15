@@ -16,38 +16,47 @@
 }
 
 .AtomCircle:hover #topOrbital .rotate {
-  -webkit-animation: circle 1.5s infinite linear;
-  -webkit-transform-origin: 50% 50%;
   animation: circle 1.5s infinite linear;
   transform-origin: 50% 50%;
 }
 
 .AtomCircle:hover #topOrbital .counterRotate {
-  -webkit-animation: counterCircle 1.5s infinite linear;
   animation: counterCircle 1.5s infinite linear;
 }
 
+.AtomCircle:hover #upperMiddleOrbital .rotate {
+  animation: circle 1.8s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+.AtomCircle:hover #upperMiddleOrbital .counterRotate {
+  animation: counterCircle 1.8s infinite linear;
+}
+
 .AtomCircle:hover #middleOrbital .rotate {
-  -webkit-animation: circle 1.6s infinite linear;
-  -webkit-transform-origin: 50% 50%;
   animation: circle 1.6s infinite linear;
   transform-origin: 50% 50%;
 }
 
 .AtomCircle:hover #middleOrbital .counterRotate {
-  -webkit-animation: counterCircle 1.6s infinite linear;
   animation: counterCircle 1.6s infinite linear;
 }
 
+.AtomCircle:hover #lowerMiddleOrbital .rotate {
+  animation: circle 1.3s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+.AtomCircle:hover #lowerMiddleOrbital .counterRotate {
+  animation: counterCircle 1.3s infinite linear;
+}
+
 .AtomCircle:hover #bottomOrbital .rotate {
-  -webkit-animation: circle 1.2s infinite linear;
-  -webkit-transform-origin: 50% 50%;
   animation: circle 1.2s infinite linear;
   transform-origin: 50% 50%;
 }
 
 .AtomCircle:hover #bottomOrbital .counterRotate {
-  -webkit-animation: counterCircle 1.2s infinite linear;
   animation: counterCircle 1.2s infinite linear;
 }
 
@@ -76,63 +85,52 @@
   background-color: rgb(182, 212, 202);
   border-radius: 50%;
   position: absolute;
-  display: none;
+  display: block;
   border: 1px solid black;
-  -webkit-transform: scaleX(0.2);
   transform: scaleX(0.2);
 }
 
 #topOrbital {
   transform: rotate(45deg) scaleX(5);
-  -webkit-transform: rotate(45deg) scaleX(5);
   left: 50px;
   top: 50px;
 }
 
+#upperMiddleOrbital {
+  transform: rotate(160deg) scaleX(5);
+  left: -48px;
+}
+
 #middleOrbital {
   top: 20px;
-  -webkit-transform: scaleX(5);
   transform: scaleX(5);
+}
+
+#lowerMiddleOrbital {
+  left: -28px;
+  top: -60px;
+  transform: rotate(-160deg) scaleX(5);
 }
 
 #bottomOrbital {
   transform: rotate(-45deg) scaleX(5);
-  -webkit-transform: rotate(-45deg) scaleX(5);
   top: -25px;
-}
-
-@-webkit-keyframes circle {
-  from {
-    -webkit-transform: rotateZ(0deg);
-  }
-  to {
-    -webkit-transform: rotateZ(360deg);
-  }
 }
 
 @keyframes circle {
   from {
-    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
   }
   to {
-    -webkit-transform: rotateZ(360deg);
-  }
-}
-
-@-webkit-keyframes counterCircle {
-  from {
-    -webkit-transform: rotateZ(360deg);
-  }
-  to {
-    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(360deg);
   }
 }
 
 @keyframes counterCircle {
   from {
-    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
   }
   to {
-    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
   }
 }
