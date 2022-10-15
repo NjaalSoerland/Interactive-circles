@@ -15,6 +15,10 @@
   display: block;
 }
 
+.AtomCircle:hover #topOrbital .orbital {
+  animation: borderFade 1.5s infinite linear;
+}
+
 .AtomCircle:hover #topOrbital .rotate {
   animation: circle 1.5s infinite linear;
   transform-origin: 50% 50%;
@@ -22,6 +26,10 @@
 
 .AtomCircle:hover #topOrbital .counterRotate {
   animation: counterCircle 1.5s infinite linear;
+}
+
+.AtomCircle:hover #upperMiddleOrbital .orbital {
+  animation: borderFade 1.8s infinite linear;
 }
 
 .AtomCircle:hover #upperMiddleOrbital .rotate {
@@ -33,6 +41,10 @@
   animation: counterCircle 1.8s infinite linear;
 }
 
+.AtomCircle:hover #middleOrbital .orbital {
+  animation: borderFade 1.6s infinite linear;
+}
+
 .AtomCircle:hover #middleOrbital .rotate {
   animation: circle 1.6s infinite linear;
   transform-origin: 50% 50%;
@@ -42,6 +54,10 @@
   animation: counterCircle 1.6s infinite linear;
 }
 
+.AtomCircle:hover #lowerMiddleOrbital .orbital {
+  animation: borderFade 1.3s infinite linear;
+}
+
 .AtomCircle:hover #lowerMiddleOrbital .rotate {
   animation: circle 1.3s infinite linear;
   transform-origin: 50% 50%;
@@ -49,6 +65,10 @@
 
 .AtomCircle:hover #lowerMiddleOrbital .counterRotate {
   animation: counterCircle 1.3s infinite linear;
+}
+
+.AtomCircle:hover #bottomOrbital .orbital {
+  animation: borderFade 1.2s infinite linear;
 }
 
 .AtomCircle:hover #bottomOrbital .rotate {
@@ -86,7 +106,6 @@
   border-radius: 50%;
   position: absolute;
   display: block;
-  border: 1px solid black;
   transform: scaleX(0.2);
 }
 
@@ -118,19 +137,37 @@
 }
 
 @keyframes circle {
-  from {
+  0% {
     transform: rotateZ(0deg);
   }
-  to {
+  50% {
+    border: none;
+  }
+  100% {
     transform: rotateZ(360deg);
   }
 }
 
 @keyframes counterCircle {
-  from {
+  0% {
     transform: rotateZ(360deg);
   }
-  to {
+  100% {
     transform: rotateZ(0deg);
+  }
+}
+
+@keyframes borderFade {
+  0% {
+    border: 1px solid black;
+  }
+  25% {
+    border: none;
+  }
+  75% {
+    border: none;
+  }
+  100% {
+    border: 1px solid black;
   }
 }
