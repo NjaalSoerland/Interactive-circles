@@ -14,7 +14,6 @@
     rgba(93, 135, 131, 1) 0%,
     rgba(72, 105, 102, 1) 100%
   );
-  border: 1px solid black;
   border-radius: 50%;
   transition: 0.2s;
   position: relative;
@@ -107,9 +106,6 @@
   0% {
     transform: rotateZ(0deg);
   }
-  50% {
-    border: none;
-  }
   100% {
     transform: rotateZ(360deg);
   }
@@ -126,19 +122,15 @@
 
 @keyframes borderFade {
   0% {
-    border: none;
     scale: 0.9;
   }
   25% {
-    border: 1px solid black;
     scale: 1.1;
   }
   75% {
-    border: 1px solid black;
     scale: 1.1;
   }
   100% {
-    border: none;
     scale: 0.9;
   }
 }
