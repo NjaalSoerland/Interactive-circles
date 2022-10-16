@@ -10,7 +10,7 @@ const AtomCircle: React.FC = () => {
   ];
   return (
     <div className={styles.AtomCircle}>
-      <img src={logo} alt="-----"></img>
+      <img src={logo} alt="insert alt here"></img>
       <div className={styles.hoverable} />
       {orbits.map((orbit) => {
         return (
