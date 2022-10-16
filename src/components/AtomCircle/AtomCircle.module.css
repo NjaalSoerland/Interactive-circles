@@ -85,9 +85,9 @@
 }
 
 #topOrbital {
-  transform: rotate(45deg) scaleX(5);
-  left: 54px;
-  top: 54px;
+  transform: rotate(55deg) scaleX(5);
+  left: 51px;
+  top: 65px;
 }
 
 #middleOrbital {
@@ -96,8 +96,9 @@
 }
 
 #bottomOrbital {
-  transform: rotate(-45deg) scaleX(5);
-  top: -45px;
+  transform: rotate(-55deg) scaleX(5);
+  top: -50px;
+  left: 80px;
 }
 
 /** Animations **/
