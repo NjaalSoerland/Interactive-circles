@@ -23,10 +23,11 @@
 
 .HologramCircle:hover {
   transform: scaleY(0.5);
+  box-shadow: 0 20px rgb(72, 105, 102);
 }
 
 .HologramCircle:hover img {
-  scale: 3;
+  scale: 2.5;
   top: -200px;
   animation: spin 10s infinite linear;
 }
@@ -35,9 +36,9 @@
 
 @keyframes spin {
   0% {
-    transform: rotateZ(0deg);
+    rotate: 0deg;
   }
   100% {
-    transform: rotateZ(360deg);
+    rotate: 360deg;
   }
 }
